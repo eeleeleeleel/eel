@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EEL — Custom Resin Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Telex&family=Staatliches&family=Gravitas+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/commission.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="comm-topbar">
+    <a href="index.html" class="comm-back">
+      <svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <polyline points="13,4 7,10 13,16"/>
+      </svg>
+    </a>
+    <a href="index.html" class="comm-logo">EEL</a>
+  </div>
+
+  <div class="comm-layout">
+
+    <!-- Left: Steps -->
+    <div class="comm-steps">
+
+      <!-- Intro -->
+      <div class="comm-intro fade-up">
+        <h1 class="comm-title">Custom Resin Table</h1>
+        <hr class="comm-divider">
+      </div>
+
+      <!-- Step 1: Color -->
+      <section class="comm-section fade-up" id="step-color">
+        <div class="comm-step-num">01</div>
+        <h2 class="comm-step-title">Color</h2>
+        <p class="comm-step-desc">레진 컬러를 선택해주세요</p>
+        <div class="color-palette" id="colorPalette">
+          <div class="color-swatch" data-color="#A8D5E2" data-name="Glacier Blue" style="background:#A8D5E2"></div>
+          <div class="color-swatch" data-color="#1B4F72" data-name="Deep Ocean" style="background:#1B4F72"></div>
+          <div class="color-swatch" data-color="#5BA4CF" data-name="Sky Blue" style="background:#5BA4CF"></div>
+          <div class="color-swatch" data-color="#40E0D0" data-name="Turquoise" style="background:#40E0D0"></div>
+          <div class="color-swatch" data-color="#0E7C7B" data-name="Teal" style="background:#0E7C7B"></div>
+          <div class="color-swatch" data-color="#27AE60" data-name="Emerald" style="background:#27AE60"></div>
+          <div class="color-swatch" data-color="#7DCEA0" data-name="Sage" style="background:#7DCEA0"></div>
+          <div class="color-swatch" data-color="#ABEBC6" data-name="Mint" style="background:#ABEBC6"></div>
+          <div class="color-swatch" data-color="#F0EDE8" data-name="Pearl" style="background:#F0EDE8; border:1px solid #555"></div>
+          <div class="color-swatch" data-color="#BDC3C7" data-name="Smoke" style="background:#BDC3C7"></div>
+          <div class="color-swatch" data-color="#17202A" data-name="Obsidian" style="background:#17202A; border:1px solid #333"></div>
+          <div class="color-swatch" data-color="#F39C12" data-name="Amber" style="background:#F39C12"></div>
+          <div class="color-swatch" data-color="#E74C3C" data-name="Coral" style="background:#E74C3C"></div>
+          <div class="color-swatch" data-color="#CA6F1E" data-name="Terracotta" style="background:#CA6F1E"></div>
+          <div class="color-swatch" data-color="#6C3483" data-name="Violet" style="background:#6C3483"></div>
+        </div>
+        <p class="color-selected-name" id="colorName">컬러를 선택해주세요</p>
+        <button class="custom-color-btn" id="customColorBtn">+ 커스텀 컬러 요청</button>
+        <div class="custom-color-field" id="customColorField">
+          <input type="text" placeholder="원하는 컬러를 설명해주세요 (예: 진한 포레스트 그린)" />
+        </div>
+      </section>
+
+      <!-- Step 2: Size -->
+      <section class="comm-section fade-up" id="step-size">
+        <div class="comm-step-num">02</div>
+        <h2 class="comm-step-title">Size</h2>
+        <p class="comm-step-desc">테이블 상판 지름 또는 폭을 선택해주세요</p>
+        <div class="size-options">
+          <div class="size-card" data-size="S" data-range="30–45 cm">
+            <span class="size-letter">S</span>
+            <span class="size-range">30 — 45 cm</span>
+            <div class="size-cm-field">
+              <input type="number" class="size-cm-input" placeholder="cm" min="30" max="45" />
+            </div>
+          </div>
+          <div class="size-card" data-size="M" data-range="50–65 cm">
+            <span class="size-letter">M</span>
+            <span class="size-range">50 — 65 cm</span>
+            <div class="size-cm-field">
+              <input type="number" class="size-cm-input" placeholder="cm" min="50" max="65" />
+            </div>
+          </div>
+          <div class="size-card" data-size="L" data-range="70–90 cm">
+            <span class="size-letter">L</span>
+            <span class="size-range">70 — 90 cm</span>
+            <div class="size-cm-field">
+              <input type="number" class="size-cm-input" placeholder="cm" min="70" max="90" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Height -->
+      <section class="comm-section fade-up" id="step-height">
+        <div class="comm-step-num">03</div>
+        <h2 class="comm-step-title">Height</h2>
+        <p class="comm-step-desc">테이블 용도에 맞는 높이를 선택해주세요</p>
+        <div class="height-options">
+          <div class="height-card" data-height="다이닝" data-cm="72–75 cm">
+            <span class="height-label">Dining</span>
+            <span class="height-cm">72 — 75 cm</span>
+            <span class="height-desc">식탁</span>
+          </div>
+          <div class="height-card" data-height="카페" data-cm="65 cm">
+            <span class="height-label">Café</span>
+            <span class="height-cm">65 cm</span>
+            <span class="height-desc">카페, 바 체어용</span>
+          </div>
+          <div class="height-card" data-height="사이드" data-cm="40–50 cm">
+            <span class="height-label">Side</span>
+            <span class="height-cm">40 — 50 cm</span>
+            <span class="height-desc">소파 사이드, 협탁</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 4: Legs -->
+      <section class="comm-section fade-up" id="step-legs">
+        <div class="comm-step-num">04</div>
+        <h2 class="comm-step-title">Legs</h2>
+        <p class="comm-step-desc">다리 형태를 선택해주세요</p>
+        <div class="leg-options">
+          <div class="leg-card" data-legs="4" data-legs-label="4개 다리">
+            <div class="leg-visual leg-visual--4">
+              <div class="lv-top"></div>
+              <div class="lv-legs">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <span class="leg-label">4 Legs</span>
+            <span class="leg-desc">안정적인 네 다리</span>
+          </div>
+          <div class="leg-card" data-legs="1" data-legs-label="중앙 1개" id="pedestalCard">
+            <div class="leg-visual leg-visual--1">
+              <div class="lv-top"></div>
+              <div class="lv-pedestal">
+                <span></span>
+              </div>
+            </div>
+            <span class="leg-label">Pedestal</span>
+            <span class="leg-desc">중앙 단일 기둥</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 5: Inquiry -->
+      <section class="comm-section fade-up" id="step-inquiry">
+        <div class="comm-step-num">05</div>
+        <h2 class="comm-step-title">Inquiry</h2>
+        <p class="comm-step-desc">선택 내용을 확인하고 문의를 보내주세요</p>
+        <div class="inquiry-summary">
+          <div class="summary-row">
+            <span class="summary-label">Color</span>
+            <span class="summary-value" id="sumColor">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Size</span>
+            <span class="summary-value" id="sumSize">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Height</span>
+            <span class="summary-value" id="sumHeight">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Legs</span>
+            <span class="summary-value" id="sumLegs">—</span>
+          </div>
+        </div>
+        <form class="inquiry-form">
+          <input type="text" placeholder="이름" required />
+          <input type="tel" placeholder="전화번호" required />
+          <input type="email" placeholder="이메일" required />
+          <textarea placeholder="추가 요청사항" rows="4"></textarea>
+          <button type="submit" class="inquiry-submit">문의 보내기</button>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- Right: Sticky Preview -->
+    <div class="comm-preview">
+      <div class="preview-scene">
+        <div class="preview-canvas-wrap" id="previewCanvasWrap"></div>
+      </div>
+      <div class="preview-summary">
+        <div class="preview-row">
+          <span class="preview-label">Color</span>
+          <span class="preview-value" id="prevColor">—</span>
+        </div>
+        <div class="preview-row">
+          <span class="preview-label">Size</span>
+          <span class="preview-value" id="prevSize">—</span>
+        </div>
+        <div class="preview-row">
+          <span class="preview-label">Height</span>
+          <span class="preview-value" id="prevHeight">—</span>
+        </div>
+        <div class="preview-row">
+          <span class="preview-label">Legs</span>
+          <span class="preview-value" id="prevLegs">—</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/commission.js"></script>
+</body>
+</html>

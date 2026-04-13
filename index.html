@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EEL — Furniture & Object Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Telex&family=Staatliches&family=Gravitas+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="intro-overlay" id="introOverlay"></div>
+
+  <!-- Nav Toggle (top left) -->
+  <button class="nav-toggle" id="navToggle" aria-label="메뉴"></button>
+
+  <!-- Cart Icon (top right) -->
+  <button class="cart-icon" aria-label="장바구니">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 01-8 0"/>
+    </svg>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-left">
+    </div>
+    <div class="nav-center">
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link">Works</a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">Furniture</a>
+          <a href="#" class="dropdown-item">Object</a>
+          <a href="#" class="dropdown-item">Painting</a>
+        </div>
+      </div>
+      <a href="commission.html" class="nav-link">Commission</a>
+      <a href="#" class="nav-link" id="contactBtn">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-copy">© EEL</span>
+    </div>
+  </nav>
+
+  <!-- Works Page -->
+  <div class="works-page" id="worksPage">
+    <div class="works-topbar">
+      <button class="works-back" id="worksClose">
+        <svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <polyline points="13,4 7,10 13,16"/>
+        </svg>
+      </button>
+      <a href="#" class="works-topbar-logo" id="worksHome">EEL</a>
+      <button class="works-topbar-cart" aria-label="장바구니">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+    </div>
+    <div class="works-grid">
+      <div class="works-item" id="greentableThumb">
+        <img src="images/works/greentable3.jpg" alt="Green Table">
+      </div>
+      <div class="works-item" id="cabinetThumb">
+        <img src="images/works/cabinet1.jpg" alt="Cabinet">
+      </div>
+      <div class="works-item" id="acrylicThumb">
+        <img src="images/works/acrylictable3.jpg" alt="Acrylic Table">
+      </div>
+      <div class="works-item" id="tableThumb">
+        <img src="images/works/table2.jpg" alt="Table">
+      </div>
+      <div class="works-item" id="tiletableThumb">
+        <img src="images/works/tiletable2.jpg" alt="Tile Table">
+      </div>
+    </div>
+  </div>
+
+  <!-- Green Table Detail -->
+  <div class="cabinet-detail" id="greentableDetail">
+    <button class="cabinet-close" id="greentableClose"><svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="13,4 7,10 13,16"/></svg></button>
+    <div class="cabinet-info">
+      <p class="cabinet-title">turquoise resin table</p>
+      <p class="cabinet-specs">Ø 74 – 76 cm &nbsp;/&nbsp; H 76 cm</p>
+      <p class="cabinet-price">₩ 1,500,000</p>
+      <p class="cabinet-sold">SOLD OUT</p>
+    </div>
+    <div class="cabinet-photos">
+      <img src="images/works/greentable1.jpg" alt="Green Table 1">
+      <img src="images/works/greentable2.jpg" alt="Green Table 2">
+      <img src="images/works/greentable3.jpg" alt="Green Table 3">
+      <img src="images/works/greentable4.jpg" alt="Green Table 4">
+    </div>
+  </div>
+
+  <!-- Table Detail -->
+  <div class="cabinet-detail" id="tableDetail">
+    <button class="cabinet-close" id="tableClose"><svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="13,4 7,10 13,16"/></svg></button>
+    <div class="cabinet-info">
+      <p class="cabinet-title">glacier blue resin table</p>
+      <p class="cabinet-specs">Ø 73 – 77 cm &nbsp;/&nbsp; H 72 cm</p>
+      <p class="cabinet-price">₩ 1,800,000</p>
+    </div>
+    <div class="cabinet-photos">
+      <img src="images/works/table2.jpg" alt="Table 1">
+      <img src="images/works/table3.jpg" alt="Table 2">
+      <img src="images/works/table1.jpg" alt="Table 3">
+      <img src="images/works/table4.jpg" alt="Table 4">
+      <img src="images/works/table5.jpg" alt="Table 5">
+      <img src="images/works/table6.jpg" alt="Table 6">
+    </div>
+  </div>
+
+  <!-- Acrylic Table Detail -->
+  <div class="cabinet-detail" id="acrylicDetail">
+    <button class="cabinet-close" id="acrylicClose"><svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="13,4 7,10 13,16"/></svg></button>
+    <div class="cabinet-info">
+      <p class="cabinet-title">acrylic table</p>
+    </div>
+    <div class="cabinet-photos">
+      <img src="images/works/acrylictable3.jpg" alt="Acrylic Table 1">
+      <img src="images/works/acrylictable1.jpg" alt="Acrylic Table 2">
+      <img src="images/works/acrylictable2.jpg" alt="Acrylic Table 3">
+    </div>
+  </div>
+
+  <!-- Tile Table Detail -->
+  <div class="cabinet-detail" id="tiletableDetail">
+    <button class="cabinet-close" id="tiletableClose"><svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="13,4 7,10 13,16"/></svg></button>
+    <div class="cabinet-info">
+      <p class="cabinet-title">sky blue ceramic tile table</p>
+    </div>
+    <div class="cabinet-photos">
+      <img src="images/works/tiletable2_a.jpg" alt="Tile Table 1">
+      <img src="images/works/tiletable4.jpg" alt="Tile Table 2">
+      <img src="images/works/tiletable3.jpg" alt="Tile Table 3">
+    </div>
+  </div>
+
+  <!-- Cabinet Detail -->
+  <div class="cabinet-detail" id="cabinetDetail">
+    <button class="cabinet-close" id="cabinetClose"><svg width="28" height="28" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="13,4 7,10 13,16"/></svg></button>
+    <div class="cabinet-info">
+      <p class="cabinet-title">leaking light cabinet</p>
+      <p class="cabinet-specs">W 76 cm &nbsp;/&nbsp; D 42 cm &nbsp;/&nbsp; H 46 cm</p>
+      <p class="cabinet-price">₩ 700,000</p>
+    </div>
+    <div class="cabinet-photos">
+      <img src="images/works/cabinet1.jpg" alt="Cabinet 1">
+      <img src="images/works/cabinet2.jpg" alt="Cabinet 2">
+      <img src="images/works/cabinet3.jpg" alt="Cabinet 3">
+      <img src="images/works/cabinet4.jpg" alt="Cabinet 4">
+      <img src="images/works/cabinet5.jpg" alt="Cabinet 5">
+    </div>
+  </div>
+
+  <!-- Scroll hint arrow -->
+  <div class="scroll-hint" id="scrollHint">
+    <svg width="40" height="40" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <polyline points="4,7 10,13 16,7"/>
+    </svg>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img src="images/bg.jpg" alt="" class="hero-img">
+    <div class="hero-text">
+      <p class="hero-text-intro">EEL</p>
+      <hr class="hero-divider">
+      <p class="hero-text-body">A Seoul-based studio crafting resin objects that are eccentric by nature, precise by hand</p>
+      <p class="hero-text-body hero-text-body--spaced">
+        We work at the edge of material and form —<br>
+        where function meets something harder to name
+      </p>
+      <hr class="hero-divider">
+      <div class="hero-contact">
+        <a href="https://instagram.com/eel.eel.eel.eel" target="_blank" class="hero-contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="mailto:eelobjects@gmail.com" class="hero-contact-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="2,4 12,13 22,4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <div class="hero-footer">
+    <p>MON – SUN 12:00 – 18:00</p>
+    <p>open 365</p>
+    <p class="hero-footer-gap">1F 508, Hoedong-gil, SEOUL, KOREA</p>
+    <p>BIZ LICENSE 305-46-07793</p>
+    <p>EEL</p>
+    <p>CHAE MIN SOO</p>
+    <p>Copyright ©2025 EEL All rights reserved</p>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal-overlay" id="contactOverlay">
+    <div class="contact-modal" id="contactModal">
+      <button class="contact-modal-close" id="contactModalClose">✕</button>
+      <p class="contact-modal-title">Contact</p>
+      <hr class="contact-modal-divider">
+      <div class="contact-modal-content">
+        <div class="contact-modal-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>eel.eel.eel.eel</span>
+        </div>
+        <div class="contact-modal-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="2,4 12,13 22,4"/>
+          </svg>
+          <span>eelobjects<span class="contact-modal-at">@</span>gmail.com</span>
+        </div>
+        <div class="contact-modal-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+          <span>압구정동, 서울 &nbsp;/&nbsp; 문발동, 파주</span>
+        </div>
+        <div class="contact-modal-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <span>010-5229-7728</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
