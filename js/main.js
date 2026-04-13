@@ -173,10 +173,11 @@ let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
-  if (currentScrollY < lastScrollY) {
+  const delta = currentScrollY - lastScrollY;
+  if (delta < -6) {
     nav.classList.add('visible');
     scrollHint.classList.add('hidden');
-  } else if (currentScrollY > lastScrollY) {
+  } else if (delta > 6) {
     nav.classList.remove('visible');
     scrollHint.classList.remove('hidden');
   }
